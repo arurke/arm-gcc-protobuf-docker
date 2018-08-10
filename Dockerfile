@@ -24,4 +24,7 @@ RUN python setup.py build && \
     python setup.py test && \
     python setup.py install
 
-RUN arm-none-eabi-gcc --version && gcc --version && python --version && protoc --version
+# Cleanup
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN arm-none-eabi-gcc --version && gcc --version && python --version && protoc --version && make --version
