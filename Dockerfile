@@ -1,4 +1,4 @@
-FROM python:2.7.15
+FROM python:3.7.4-slim-buster
 
 # arm-gcc + other tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
